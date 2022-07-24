@@ -96,7 +96,12 @@ logInForm.addEventListener('submit', (e) => {
 
 
 // Logout
-buttonOut.addEventListener('click', loguout);
+buttonOut.addEventListener('click', () => {
+  loguout();
+  if(window.location.pathname === '/restaurant.html') {
+    window.location.href = './index.html';
+  }
+});
 
 
 // Check data on localstorage
